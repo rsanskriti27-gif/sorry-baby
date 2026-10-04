@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You, Baby 🤍</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background:linear-gradient(135deg,#fff4f6,#f9edf5,#fff8f0);
+  font-family:Arial,sans-serif;
+  color:#573b47;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:18px;
+}
+
+.card{
+  width:100%;
+  max-width:420px;
+  min-height:620px;
+  background:rgba(255,255,255,.88);
+  border:1px solid rgba(190,110,140,.18);
+  border-radius:30px;
+  padding:35px 24px 28px;
+  text-align:center;
+  box-shadow:0 18px 45px rgba(120,70,95,.14);
+  position:relative;
+  overflow:hidden;
+}
+
+.heart{
+  position:absolute;
+  font-size:22px;
+  opacity:.65;
+  animation:float 4s ease-in-out infinite;
+}
+
+.h1{top:20px;left:20px}
+.h2{top:38px;right:22px;animation-delay:1s}
+.h3{bottom:30px;left:22px;animation-delay:1.5s}
+.h4{bottom:45px;right:20px;animation-delay:2s}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-9px)}
+}
+
+.screen{
+  display:none;
+  min-height:550px;
+  animation:fade .5s ease;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.screen.active{
+  display:flex;
+}
+
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.emoji{
+  font-size:62px;
+  margin-bottom:12px;
+}
+
+h1{
+  font-size:29px;
+  margin:8px 0 16px;
+  color:#713e52;
+}
+
+h2{
+  font-size:24px;
+  margin:8px 0 18px;
+  color:#713e52;
+}
+
+p{
+  font-size:16px;
+  line-height:1.7;
+  margin:9px 0;
+}
+
+.soft{
+  color:#846572;
+}
+
+.big-love{
+  font-size:28px;
+  font-weight:bold;
+  color:#a64d6b;
+  margin:20px 0;
+}
+
+.note{
+  width:100%;
+  background:#fff5f7;
+  border-radius:20px;
+  padding:18px;
+  margin:8px 0;
+  line-height:1.7;
+  border:1px solid #f6dce5;
+}
+
+.highlight{
+  font-weight:bold;
+  color:#984862;
+}
+
+button{
+  border:none;
+  background:linear-gradient(135deg,#c86687,#aa5271);
+  color:white;
+  padding:13px 28px;
+  border-radius:30px;
+  font-size:15px;
+  font-weight:bold;
+  margin-top:22px;
+  cursor:pointer;
+  box-shadow:0 8px 18px rgba(170,82,113,.22);
+}
+
+button:active{
+  transform:scale(.96);
+}
+
+.divider{
+  margin:14px 0;
+  color:#c47791;
+  letter-spacing:7px;
+}
+
+.teddies{
+  font-size:48px;
+  margin:18px 0 5px;
+  animation:hug 2s infinite ease-in-out;
+}
+
+@keyframes hug{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.06)}
+}
+
+.kisses{
+  font-size:28px;
+  letter-spacing:7px;
+  margin-top:15px;
+}
+
+.small{
+  font-size:13px;
+  opacity:.65;
+}
+
+.signature{
+  margin-top:22px;
+  font-style:italic;
+  color:#8b6070;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="heart h1">♡</div>
+  <div class="heart h2">♥</div>
+  <div class="heart h3">♡</div>
+  <div class="heart h4">♥</div>
+
+
+  <!-- 1 -->
+  <section class="screen active">
+
+    <div class="emoji">💌</div>
+
+    <h1>Hey you… 🤍</h1>
+
+    <p>
+      I just wanted to say<br>
+      something from my heart.
+    </p>
+
+    <div class="divider">♡ ♡ ♡</div>
+
+    <p class="soft">
+      It's not a big speech.<br>
+      Just a few honest words.
+    </p>
+
+    <button onclick="nextScreen()">
+      Read this? 🥺
+    </button>
+
+  </section>
+
+
+  <!-- 2 -->
+  <section class="screen">
+
+    <div class="emoji">🥺</div>
+
+    <h2>I'm really, really sorry.</h2>
+
+    <div class="note">
+
+      Jo bhi hua,
+      mera intention kabhi tumhe hurt karna nahi tha,
+      aur na kabhi hoga. 🤍
+
+      <br><br>
+
+      Mujhe kuch laga aur maine usi thought mein
+      gusse mein react kar diya.
+
+      <br><br>
+
+      Mujhe pehle tumse poochna chahiye tha,
+      instead of assuming things.
+
+      <br><br>
+
+      <span class="highlight">
+      And I genuinely regret the way I reacted.
+      </span>
+
+    </div>
+
+    <button onclick="nextScreen()">
+      There's something else… 🤍
+    </button>
+
+  </section>
+
+
+  <!-- 3 -->
+  <section class="screen">
+
+    <div class="emoji">🫶🏻</div>
+
+    <h2>Something I want you to understand…</h2>
+
+    <div class="note">
+
+      Main jaan-bujhkar tumse muh nahi banati. 🥺
+
+      <br><br>
+
+      Kabhi-kabhi bas mere mood swings hote hain,
+      ya pata nahi kyun tumse door jaane ka mann nahi karta.
+
+      <br><br>
+
+      Kabhi koi chhoti si baat bhi mujhe hurt kar deti hai
+      aur phir main emotional ho jaati hoon.
+
+      <br><br>
+
+      Jab tum mere paas hote ho na,
+      mujhe bas lagta hai ki sab mujhse waise hi
+      pyaar se baat karein jaise tum karte ho. 🤍
+
+      <br><br>
+
+      Aur jab aisa nahi hota,
+      toh pata nahi kyun mera muh ban jaata hai.
+
+    </div>
+
+    <button onclick="nextScreen()">
+      But one thing never changes… ❤️
+    </button>
+
+  </section>
+
+
+  <!-- 4 -->
+  <section class="screen">
+
+    <div class="emoji">❤️</div>
+
+    <h2>One thing never changes.</h2>
+
+    <div class="big-love">
+      I TRUST YOU.<br>
+      A LOT.
+    </div>
+
+    <p>
+      Shayad kabhi-kabhi gusse aur emotions mein
+      meri understanding mess up ho jaati hai…
+    </p>
+
+    <p>
+      But that doesn't mean I don't trust you.
+    </p>
+
+    <div class="divider">♡ ♥ ♡</div>
+
+    <p>
+      Aur tumhe pata hai na…
+    </p>
+
+    <div class="big-love">
+      I LOVE YOU<br>
+      SO, SO MUCH. 🥺❤️
+    </div>
+
+    <button onclick="nextScreen()">
+      Our promise… 🫂
+    </button>
+
+  </section>
+
+
+  <!-- 5 -->
+  <section class="screen">
+
+    <div class="emoji">🧸</div>
+
+    <h2>Humne promise kiya tha na…</h2>
+
+    <div class="note">
+
+      Ki hum zyada der tak aise ladke nahi rahenge.
+
+      <br><br>
+
+      Jo bhi hoga,
+      <span class="highlight">
+      ek din mein sort kar lenge.
+      </span>
+
+      <br><br>
+
+      So… let's keep that promise. 🤍
+
+    </div>
+
+    <p class="soft">
+      I don't want one silly moment
+      to become bigger than us.
+    </p>
+
+    <button onclick="nextScreen()">
+      One last thing 💗
+    </button>
+
+  </section>
+
+
+  <!-- 6 -->
+  <section class="screen">
+
+    <div class="emoji">💗</div>
+
+    <h2>I'm sorry, baby.</h2>
+
+    <p>
+      I really, really mean it. 🥺
+    </p>
+
+    <div class="big-love">
+      I LOVE YOU<br>
+      SO MUCH. ❤️
+    </div>
+
+    <p>
+      And I know you love me too. 🤍
+    </p>
+
+    <div class="teddies">
+      🧸🧸
+    </div>
+
+    <div class="kisses">
+      💋 💕 💋
+    </div>
+
+    <p class="signature">
+      Always your girl. 🤍
+    </p>
+
+  </section>
+
+</div>
+
+
+<script>
+
+let currentScreen = 0;
+
+const screens = document.querySelectorAll(".screen");
+
+function nextScreen(){
+
+  if(currentScreen < screens.length - 1){
+
+    screens[currentScreen].classList.remove("active");
+
+    currentScreen++;
+
+    screens[currentScreen].classList.add("active");
+
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
